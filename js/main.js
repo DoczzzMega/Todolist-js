@@ -79,7 +79,14 @@ function getAllTitles() {
 }
 
 function setTitleStorage() {
-    localStorage.setItem('titles', getAllTitles())
+    localStorage.setItem('titles', getAllTitles());
+
+    let emptyList = document.querySelector('.empty-list__title');   
+    if (localStorage.getItem('titles') == '[]') {
+        emptyList.innerText = 'Вы сделали все дела! Идите спать';
+    } else {
+        emptyList.innerText = 'Список дел';
+    }
 }
 
 function renderTasks() {
