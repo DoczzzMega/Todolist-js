@@ -77,6 +77,10 @@ body {
   pointer-events: none;
 }
 
+.btn-done-complete {
+  outline: 2px solid#42BE2A;
+}
+
 .none {
   display: none !important;
 }
