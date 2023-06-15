@@ -9,9 +9,6 @@ let input = document.querySelector('#taskInput');
 let ul = document.querySelector('#tasksList');
 let btnAllremove = document.querySelector('#removeDoneTasks');
 
-let storageOFTitles = {
-    array: []
-};
 
 form.addEventListener('submit', e => {
     e.preventDefault();
