@@ -21,7 +21,9 @@ ul.addEventListener('click', e => {
     let currentTaskItem = currentEl.parentElement.parentElement;
     let valueOfDataAttr = currentEl.getAttribute('data-action');
 
+
     if (valueOfDataAttr == 'done') {
+        currentEl.classList.toggle('btn-done-complete');
         toggleComplTask(currentTaskItem);
     }
     if (valueOfDataAttr == 'delete') {
