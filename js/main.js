@@ -80,7 +80,10 @@ function getAllTitles() {
 
 function setTitleStorage() {
     localStorage.setItem('titles', getAllTitles());
+    checkEmptyStorage();
+}
 
+function checkEmptyStorage() {
     let emptyList = document.querySelector('.empty-list__title');   
     if (localStorage.getItem('titles') == '[]') {
         emptyList.innerText = 'Вы сделали все дела! Идите спать';
@@ -88,6 +91,7 @@ function setTitleStorage() {
         emptyList.innerText = 'Список дел';
     }
 }
+
 
 function renderTasks() {
     let titlesArr = JSON.parse(localStorage.getItem('titles'));
